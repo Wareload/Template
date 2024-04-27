@@ -1,0 +1,28 @@
+version: '3'
+services:
+  Keycloak:
+    image: quay.io/keycloak/keycloak:24.0.3
+    command: ['start-dev]
+    environment:
+      KC_DB: postgres
+      KC_DB_URL_DATABASE: keycloak
+      KC_DB_SCHEMA: public
+      KC_DB_URL: jdbc:postgresql://postgres/keycloak
+      KC_DB_USERNAME: keycloak
+      KC_DB_PASSWORD: password
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: password
+    ports:
+      - "8089:8080" # Externe-Portnummer:Interne-Portnummer
+    profiles:
+      - full
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: password
+    profiles:
+      - db
+      - full

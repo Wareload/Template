@@ -1,0 +1,7 @@
+{
+  "forwardPorts": [3000],
+  "name": "node-21",
+  "build": {
+    "dockerfile": "Dockerfile"
+  }
+}

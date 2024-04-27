@@ -1,0 +1,5 @@
+{
+  "image": "node-21",
+  "forwardPorts": [3000],
+  "name": "node-21"
+}

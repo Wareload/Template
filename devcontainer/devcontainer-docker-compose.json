@@ -1,0 +1,7 @@
+{
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "backend",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [3000],
+  "name": "node-21"
+}
