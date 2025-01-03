@@ -43,6 +43,11 @@ Host github.com
 
 ## Host system SSH Clients
 
+
+### KDE
+
+[https://kcore.org/2022/05/18/ssh-passphrases-kde/] kde tutorial
+
 ### Windows
 
 In Windows there is the "OpenSSH Authentication Agent" built in.
@@ -58,3 +63,4 @@ When installing git bash, choose use external ssh client.
 - SSH config file gets interpreted from start to end.
 - If multiple configs matching, all are tested until a config is successful.
   -  This could result in server block, because of too many requests
+
